@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "KroQuant"
+message: "Please cite the paper below if you use this code."
+type: software
+abstract: >-
+  Post-training quantization of diffusion transformers with Kronecker-structured block
+  transforms: code of the NeurIPS 2026 paper.
+license: MIT
+keywords:
+  - quantization
+  - diffusion transformers
+  - microscaling formats
+authors:
+  - given-names: Yann
+    family-names: Bouquet
+    affiliation: "EPFL; Advanced Micro Devices, Inc."
+# TODO: repository-code: "https://github.com/<org>/<repo>"
+preferred-citation:
+  type: conference-paper
+  title: "KroQuant: Kronecker-Structured Block Transforms for Efficient Post-Training Quantization of Diffusion Transformers"
+  year: 2026
+  collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+  conference:
+    name: "NeurIPS 2026"
+  # TODO: url: "https://arxiv.org/abs/XXXX.XXXXX"
+  authors:
+    - given-names: Yann
+      family-names: Bouquet
+      affiliation: "EPFL; Advanced Micro Devices, Inc."
+    - given-names: Alireza
+      family-names: Khodamoradi
+      affiliation: "Advanced Micro Devices, Inc."
+    - given-names: Kristof
+      family-names: Denolf
+      affiliation: "Advanced Micro Devices, Inc."
+    - given-names: Mathieu
+      family-names: Salzmann
+      affiliation: "EPFL"

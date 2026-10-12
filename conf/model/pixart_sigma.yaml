@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+name: pixart_sigma
+pipeline: AutoPipelineForText2Image
+repo: PixArt-alpha/PixArt-Sigma-XL-2-1024-MS
+torch_dtype: float16
+load_kwargs: {}
+steps: 20
+guidance: 4.5
+width: 1024
+height: 1024
+
+layers:
+  - '^transformer_blocks\.\d+\.attn1\.to_(q|k|v|out\.0)$'
+  - '^transformer_blocks\.\d+\.attn2\.to_(q|out\.0)$'
+  - '^transformer_blocks\.\d+\.ff\.net\.(0\.proj|2)$'

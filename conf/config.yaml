@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - _self_
+  - experiment: ???
+
+step: ???
+seed: 0
+
+hydra:
+  run:
+    dir: ${workdir}/${name}/logs/${step}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: ${workdir}/${name}/logs/multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    chdir: false

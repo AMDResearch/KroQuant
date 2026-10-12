@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+
+defaults:
+  - /model: pixart_sigma
+  - /data: mjhq
+  - _self_
+
+name: kronecker
+workdir: outputs/${model.name}
+format: mxfp4e2 
+
+calibration:
+  prompts: coco_captions_2024
+  num_prompts: 128
+  batch_size: 16
+  num_samples: 128  
+  sample_seed: 0
+
+transform:
+  factors: 5
+  random_signs: true
+  lr: 1e-2
+  batch_size: 16
+
+kronecker_init: 
+  epochs: 0
+  layers:
+    - '^transformer_blocks\.0\.attn1\.to_q$'
+    - '^transformer_blocks\.0\.attn1\.to_k$'
+    - '^transformer_blocks\.0\.attn1\.to_v$'
+    - '^transformer_blocks\.\d+\.attn2\.to_out\.0$'
+    - '^transformer_blocks\.\d+\.ff\.net\.2$'
+
+kronecker:  
+  epochs: 100
+  layers:
+    - '^transformer_blocks\.([1-9]|[1-2][0-9])\.attn1\.to_q$'
+    - '^transformer_blocks\.([1-9]|[1-2][0-9])\.attn1\.to_k$'
+    - '^transformer_blocks\.([1-9]|[1-2][0-9])\.attn1\.to_v$'
+    - '^transformer_blocks\.\d+\.attn2\.to_q$'
+    - '^transformer_blocks\.\d+\.attn1\.to_out\.0$'
+    - '^transformer_blocks\.\d+\.ff\.net\.0\.proj$'
+
+lowrank:
+  layers: ${model.layers}
+  rank: 128
+  svd_rank: 256           
+  factor_format: ${format}
+  lr: 1e-3                
+  epochs: 500
+  rotation_lr: 0.5        
+  rotation_epochs: 500
+
+evaluation:
+  metrics: [lpips, psnr, image_reward, fid]

@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+name: sana
+pipeline: SanaPipeline
+repo: Lawrence-cj/Sana_1600M_1024px_BF16_diffusers_ch5632
+torch_dtype: bfloat16
+load_kwargs:
+  variant: bf16
+steps: 20
+guidance: 4.5
+width: 1024
+height: 1024
+
+layers:
+  - '^transformer_blocks\.\d+\.attn1\.to_(q|k|v|out\.0)$'
+  - '^transformer_blocks\.\d+\.attn2\.to_(q|out\.0)$'
+  - '^transformer_blocks\.\d+\.ff\.conv_(inverted|point)\.linear$'

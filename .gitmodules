@@ -1,0 +1,3 @@
+[submodule "third-parties/tensorcast"]
+	path = third-parties/tensorcast
+	url = https://github.com/ROCm/tensorcast.git

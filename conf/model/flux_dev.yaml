@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+name: flux_dev
+pipeline: FluxPipeline
+repo: black-forest-labs/FLUX.1-dev
+torch_dtype: bfloat16
+load_kwargs: {}
+steps: 50
+guidance: 3.5
+width: 1024
+height: 1024
+
+layers:
+  - '^transformer_blocks\.\d+\.attn\.(to_q|to_k|to_v|to_out\.0)$'
+  - '^transformer_blocks\.\d+\.attn\.(add_q_proj|add_k_proj|add_v_proj|to_add_out)$'
+  - '^transformer_blocks\.\d+\.ff(_context)?\.net\.(0\.proj|2)$'
+  - '^single_transformer_blocks\.\d+\.(attn\.to_q|attn\.to_k|attn\.to_v|proj_mlp|proj_out\.linears\.\d+)$'
