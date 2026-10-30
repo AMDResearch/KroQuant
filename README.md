@@ -126,6 +126,6 @@ the code supports. To quantize one, add an experiment file next to
 
 ## License
 
-The code is released under the MIT license, Copyright (c) 2026 Advanced Micro Devices, Inc.
+The code is released under the Apache License 2.0, Copyright 2026 Advanced Micro Devices, Inc.
 (`LICENSE`), and was written by Yann Bouquet. TensorCast, the models, the datasets and the
 metric weights keep their own licenses (`THIRD_PARTY_NOTICES.md`).

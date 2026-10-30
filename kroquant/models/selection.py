@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """Which layers a stage works on: those whose name fully matches one of its regexes."""
 

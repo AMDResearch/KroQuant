@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """Per-layer trainer of the Kronecker stages: learns the transform of one linear layer from its
 calibration inputs."""

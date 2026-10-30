@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """Prompt datasets. Each one is a Hugging Face `datasets` builder script of this folder; a batch
 is a dict of lists with `filename`, `prompt`, `seed` (and `image` when requested)."""

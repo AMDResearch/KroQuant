@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """Builder script of the calibration prompts: 1024 MS-COCO captions, the calibration set of
 SVDQuant / DeepCompressor (stored in `coco_captions_2024.json`, next to this script)."""

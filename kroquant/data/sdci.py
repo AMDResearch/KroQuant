@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """Builder script of the sDCI evaluation prompts (summarized Densely Captioned Images), as
 distributed with SVDQuant, and of its images (the FID reference)."""

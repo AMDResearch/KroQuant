@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 """A light description of a diffusion transformer: its blocks and, inside each block, the linear
 layers grouped by role. Layer names are full module paths of the transformer, e.g.

@@ -5,7 +5,7 @@ type: software
 abstract: >-
   Post-training quantization of diffusion transformers with Kronecker-structured block
   transforms: code of the NeurIPS 2026 paper.
-license: MIT
+license: Apache-2.0
 keywords:
   - quantization
   - diffusion transformers

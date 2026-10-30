@@ -1,7 +1,7 @@
 # Third-party notices
 
-KroQuant's own code is under the MIT license (`LICENSE`). Everything listed here comes from
-elsewhere and stays under its own license.
+KroQuant's own code is under the Apache License 2.0 (`LICENSE`). Everything listed here comes
+from elsewhere and stays under its own license.
 
 ## Included in this repository
 
@@ -10,7 +10,8 @@ elsewhere and stays under its own license.
 | TensorCast, https://github.com/ROCm/tensorcast, commit `56c51c955f07d71eb1b42157733d173f4b20cbc0` | git submodule `third-parties/tensorcast`, unmodified; `kroquant/quant/tensorcast.py` changes two behaviours when it is imported | MIT, Copyright (c) 2024 AMD ROCm Software |
 | 1024 MS-COCO captions, in the selection of DeepCompressor (`examples/diffusion/prompts/qdiff.yaml`, https://github.com/nunchaku-tech/deepcompressor, Apache-2.0) | `kroquant/data/coco_captions_2024.json`, calibration prompts | COCO annotations: CC BY 4.0, https://cocodataset.org |
 
-The Python packages of `requirements.txt` are installed separately and come with their own licenses.
+The Python packages of `requirements.txt` are installed separately and come with their own
+licenses. Notable: CLIP (`clip @ git+https://github.com/openai/CLIP.git`) is under the MIT license.
 
 ## Downloaded on first use
 
